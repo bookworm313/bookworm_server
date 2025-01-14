@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "username": "default_user",
+        "email": "bookworm.projekt1@gmail.com",
+        "password": "12345678",
+        "visible": true
+    }
+]

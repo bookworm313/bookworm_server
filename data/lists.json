@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "userId": 1,
+        "isDefault": true,
+        "name": "Favorites",
+        "visible": true,
+        "booksOlid": [
+            "OL37815339M",
+            "OL26629979M"
+        ]
+    },
+    {
+        "id": 2,
+        "userId": 1,
+        "isDefault": true,
+        "name": "Want To Read",
+        "visible": true,
+        "booksOlid": [
+            "OL24373119M",
+            "OL26629979M"
+        ]
+    },
+    {
+        "id": 3,
+        "userId": 2,
+        "isDefault": true,
+        "name": "Done Reading",
+        "visible": true,
+        "booksOlid": [
+            "OL2525917M"
+        ]
+    },
+    {
+        "id": 4,
+        "userId": 1,
+        "isDefault": false,
+        "name": "Funny Books",
+        "visible": true,
+        "booksOlid": [
+            "OL2525917M",
+            "OL24373119M"
+        ]
+    }
+]
