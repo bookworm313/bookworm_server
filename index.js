@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
 
+
 const app = express();
 const PORT = 3000;
 
@@ -43,6 +44,22 @@ app.get('/user/:id/lists', (req, res) => {
 	const filteredLists = lists.filter((list) => list.userId == userId);
 	console.log(`GET user ${userId} lists`);
 	res.status(200).json(filteredLists);
+})
+
+// Dohvati specifične liste po imenu
+app.get('/user/:id/lists/want_to_read', (req, res) => {
+	const userId = parseInt(req.params.id);
+	const filteredLists = lists.filter((list) => list.userId == userId);
+	const toReadList = filteredLists.find((list) => list.name === "Want To Read")
+	console.log(`GET user ${userId} Want To Read`);
+	res.status(200).json(toReadList);
+})
+app.get('/user/:id/lists/done_reading', (req, res) => {
+	const userId = parseInt(req.params.id);
+	const filteredLists = lists.filter((list) => list.userId == userId);
+	const toReadList = filteredLists.find((list) => list.name === "Done Reading")
+	console.log(`GET user ${userId} Done Reading`);
+	res.status(200).json(toReadList);
 })
 
 // Postavi određenu knjigu u odabrane liste
