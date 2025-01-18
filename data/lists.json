@@ -6,7 +6,6 @@
         "name": "Favorites",
         "visible": true,
         "booksOlid": [
-            "OL37815339M",
             "OL26629979M"
         ]
     },
@@ -17,9 +16,6 @@
         "name": "Want To Read",
         "visible": true,
         "booksOlid": [
-            "OL24373119M",
-            "OL26629979M",
-            "OL8609867M",
             "OL37768153M",
             "OL33891535M",
             "OL6070531M"

@@ -90,6 +90,27 @@ app.put('/lists/add', (req, res) => {
 	res.send("Wow");
 })
 
+// Ukloni knjigu s liste
+app.put('/remove/book', (req, res) => {
+
+	const { userId, listId, bookOlid } = req.body;
+
+	const userLists = lists.filter(list => list.userId === userId);
+	const list = userLists.find(list => list.id === listId);
+	list.booksOlid = list.booksOlid.filter(olid => olid != bookOlid);
+
+	fs.writeFile('./data/lists.json', JSON.stringify(lists, null, 4), (err) => {
+		if (err) {
+			console.log(err);
+			res.status(404).send("Error while trying to open /data/lists.json");
+		}
+	})
+
+	console.log(`PUT updating user ${userId} list ${listId} (removed book ${bookOlid})`);
+	res.status(200);
+	res.send("Wow");
+})
+
 app.listen(PORT, (error) => {
 	if (error) {
 		console.log("Error occurred, server can't start", error);
